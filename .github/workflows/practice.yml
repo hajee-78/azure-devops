@@ -1,0 +1,26 @@
+name: Basic GitHub Actions Practice
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  practice-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Show current directory
+        run: pwd
+
+      - name: List files
+        run: ls -la
+
+      - name: Display index.html
+        run: cat index.html
+
+      - name: Show success message
+        run: echo "GitHub Actions workflow completed successfully!"
